@@ -1,5 +1,9 @@
+import Header from "../components/Header";
+
 export default function IndexPage() {
   return (
-    <div>IndexPage</div>
+    <>
+        <h1>Home</h1>
+    </>
   )
 }
