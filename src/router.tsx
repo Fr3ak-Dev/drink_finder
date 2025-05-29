@@ -1,4 +1,4 @@
-import { BrowserRouter, Outlet, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import IndexPage from './views/IndexPage';
 import Layout from './layouts/Layout';
 import FavoritePage from './views/FavoritePage';
