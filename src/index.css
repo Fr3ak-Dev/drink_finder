@@ -1,1 +1,23 @@
+/**
+ * Importamos tailwindcss para poder utilizar sus utilidades.
+ * 
+ * En Tailwind v4 ya no se utiliza @config para importar los estilos 
+ * de tailwind.config.js, por lo que se utiliza @layer components 
+ * para definir los estilos personalizados.
+ * 
+ * La capa "components" es una de las capas predefinidas de Tailwind
+ * y se utiliza para definir los estilos de los componentes de la 
+ * aplicación.
+ */
+
 @import "tailwindcss";
+
+/* @config "../tailwind.config.js"; */
+
+@layer components {
+    .bg-header {
+        background: url('/bg.jpg') no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+}
