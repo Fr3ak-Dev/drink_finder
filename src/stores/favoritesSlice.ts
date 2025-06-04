@@ -4,12 +4,13 @@ import type { Recipe } from "../types";
 export type FavoritesSliceType = {
     favorites: Recipe[]
     handleClickFavorite: (recipe: Recipe) => void
+    favoriteExists: (recipe: Recipe['idDrink']) => boolean
 }
 
 export const createFavoritesSlice: StateCreator<FavoritesSliceType> = (set, get) => ({
     favorites: [],
     handleClickFavorite: (recipe) => {
-        if (get().favorites.some(fav => fav.idDrink === recipe.idDrink)) {
+        if (get().favoriteExists(recipe.idDrink)) {
             // set({
             //     favorites: get().favorites.filter(fav => fav.idDrink !== recipe.idDrink)
             // })
@@ -21,5 +22,8 @@ export const createFavoritesSlice: StateCreator<FavoritesSliceType> = (set, get)
                 favorites: [...state.favorites, recipe]
             }))
         }
+    },
+    favoriteExists: (id) => {
+        return get().favorites.some(fav => fav.idDrink === id)
     }
 })
