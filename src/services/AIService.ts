@@ -8,7 +8,7 @@ export default {
             // model: openrouter('deepseek/deepseek-chat-v3-0324:free'),
             // model: openrouter('google/gemma-3-4b-it:free'),
             prompt,
-            system: 'Eres un profesional bartender y experto en cocteles.',
+            system: 'You are a professional bartender and expert in cocktails.',
             temperature: 1,
         })
         return result.textStream
